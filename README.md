@@ -1,5 +1,5 @@
 # Simple Android Api App
-Simple Android app containing some funny buttons and api features
+Very simple Android app containing some funny buttons and api features.
 
 # Code
 
