@@ -12,12 +12,19 @@ This application is a simple funny app based on 3 apis:
 - Insult Api: fetches a string with a random insult, [link here](https://evilinsult.com/generate_insult.php?lang=en&type=json)
 - Dog image Api: fetches a random image of a dog, [link here](https://dog.ceo/api)
 
-The Gui is pretty basic, i just edited the some colors, imma add a menu next and more functionalities : )
+The Gui is pretty basic, i just edited the some colors, imma add a menu next, more functionalities, api and useless stuff : )
 
 
 
 # 💻 Code
-The
+
+The code is based almost entirely on the APIs (except for the customizable parts), but in the future as i said before I'll add a menu n stuff.
+
+### 1) Customization
+
+
+### 2) Api implementation
+
 
 
 <img align="right" src="media/img1.jpg" width="230" />
