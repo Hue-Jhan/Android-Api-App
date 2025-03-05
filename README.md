@@ -6,7 +6,7 @@ Very simple Android app in kotlin containing some funny buttons and api features
 
 <img align="right" src="media/img2.jpg" width="230" />
 
-This application is a simple funny app based on 3 apis:
+This application is a simple funny app based on 3 buttons, which answer to 3 APIs:
 
 - ```Joke Api```: fetches 2 strings of a random joke, setup + punchline, [link here](https://official-joke-api.appspot.com/jokes/random)
 - ```Insult Api```: fetches a string with a random insult, [link here](https://evilinsult.com/generate_insult.php?lang=en&type=json)
