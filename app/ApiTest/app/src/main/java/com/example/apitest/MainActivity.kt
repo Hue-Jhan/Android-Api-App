@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                 dogImageFetcher.fetchRandomDogImage() // Call fetch from DogImageFetcher
         }
 
-        // Set up button click listener
+        // button click listeners
         binding.fetchButton.setOnClickListener {
             fetchInsult()
         }
@@ -64,35 +64,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /* private fun fetchRandomDogImage() {
-        // Make an API call to get a random dog image
-        RetrofitClient.instance.getRandomDogImage().enqueue(object : Callback<DogImageResponse> {
-            override fun onResponse(call: Call<DogImageResponse>, response: Response<DogImageResponse>) {
-                if (response.isSuccessful) {
-                    // Extract the image URL from the response
-                    val imageUrl = response.body()?.message
-                    if (imageUrl != null) {
-                        // Use Glide to load the image into the ImageView
-                        Glide.with(this@MainActivity)
-                            .load(imageUrl)
-                            .into(dogImageView)
-                    } else {
-                        Toast.makeText(this@MainActivity, "No image found", Toast.LENGTH_SHORT).show()
-                    }
-                } else {
-                    Toast.makeText(this@MainActivity, "Failed to load image", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            override fun onFailure(call: Call<DogImageResponse>, t: Throwable) {
-                // Handle the error
-                Toast.makeText(this@MainActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
-    } */
 
 
-    // Function to fetch insult from the API
     private fun fetchInsult() {
         val url = "https://evilinsult.com/generate_insult.php?lang=en&type=json"
         // val client = OkHttpClient()
@@ -101,7 +74,7 @@ class MainActivity : AppCompatActivity() {
             .url(url)
             .build()
 
-        // Making the network call asynchronously
+        // asynchronous call
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 Log.e("MainActivity", "Failed to fetch insult: ${e.message}")
@@ -114,7 +87,7 @@ class MainActivity : AppCompatActivity() {
                     val gson = Gson()
                     val insultResponse = gson.fromJson(responseBody, InsultResponse::class.java)
 
-                    // Update the UI on the main thread
+                    // Update the screen    
                     runOnUiThread {
                         binding.insultTextView.text = insultResponse.insult
                     }
@@ -138,7 +111,7 @@ class MainActivity : AppCompatActivity() {
             .url(url)
             .build()
 
-        // Making the network call asynchronously
+        // asynchronous call
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 Log.e("MainActivity", "Failed to fetch joke: ${e.message}")
@@ -151,7 +124,6 @@ class MainActivity : AppCompatActivity() {
                     val gson = Gson()
                     val jokeResponse = gson.fromJson(responseBody, JokeResponse::class.java)
 
-                    // Update the UI on the main thread
                     runOnUiThread {
                         binding.setupTextView.text = jokeResponse.setup
                         binding.punchlineTextView.text = jokeResponse.punchline
@@ -161,7 +133,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    // Data class to model the API response
+    // Data class for APIs
     data class InsultResponse(
         val number: String,
         val language: String,
