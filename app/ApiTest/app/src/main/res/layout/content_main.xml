@@ -6,8 +6,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
-    <!-- TextView to display joke setup -->
-
     <Button
         android:id="@+id/fetchButton"
         android:layout_width="wrap_content"
@@ -30,7 +28,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- TextView to display joke punchline -->
 
     <Button
         android:id="@+id/fetchJokeButton"
