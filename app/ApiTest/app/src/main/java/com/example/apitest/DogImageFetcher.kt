@@ -12,13 +12,14 @@ class DogImageFetcher(private val imageView: ImageView, private val progressBar:
 
     fun fetchRandomDogImage() {
         progressBar.visibility = ProgressBar.VISIBLE
-        // API call 
+        
         RetrofitClient.instance.getRandomDogImage().enqueue(object : Callback<DogImageResponse> {
             override fun onResponse(call: Call<DogImageResponse>, response: Response<DogImageResponse>) {
                 progressBar.visibility = ProgressBar.GONE
+                
                 if (response.isSuccessful) {
-                    
                     val imageUrl = response.body()?.message
+                    
                     if (imageUrl != null) {
                         // glide loads the image into the ImageView
                         Glide.with(imageView.context)
