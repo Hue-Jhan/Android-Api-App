@@ -40,12 +40,13 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.title = "                  Api App Test xd"
 
+
+        // Api listeners:
         binding.dogButton.setOnClickListener {
             val dogImageFetcher = DogImageFetcher(dogImageView, findViewById(R.id.progressBar))
-                dogImageFetcher.fetchRandomDogImage() // Call fetch from DogImageFetcher
+                dogImageFetcher.fetchRandomDogImage()
         }
 
-        // button click listeners
         binding.fetchButton.setOnClickListener {
             fetchInsult()
         }
@@ -104,6 +105,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
+    
     private fun fetchJoke() {
         val url = "https://official-joke-api.appspot.com/jokes/random"
 
@@ -133,7 +135,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    // Data class for APIs
+    // Data classes for 2 apis
     data class InsultResponse(
         val number: String,
         val language: String,
