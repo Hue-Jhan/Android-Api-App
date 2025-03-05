@@ -1,7 +1,7 @@
 package com.example.apitest
 
-// Data class to hold the response
+
 data class DogImageResponse(
-    val message: String,  // URL of the dog image
-    val status: String    // "success" or "failure"
+    val message: String,  // URL of the image
+    val status: String   // 200 or not
 )
