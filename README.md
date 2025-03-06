@@ -22,7 +22,7 @@ The code is based almost entirely on the APIs (except for the customizable parts
 
 
 ### - Setup
-First i change some stuff like the status bar color and the title, then i setup the 3 buttons for the 3 APIs and their functions. The way i divided each section and headers is kinda confusing, besides the Main and First/Second fragments for the default behaviour, i also created ```Retrofitclient.kt``` to handle requests and 3 files to handle the dog api.
+First i change some stuff like the status bar color and the title, then i setup the 3 buttons for the 3 APIs and their functions. The way i divided each section and headers is kinda confusing: besides the Main and First/Second fragments for the default behaviour, i also created ```Retrofitclient.kt``` to handle requests, and 3 more files to handle the dog api.
 
 In ```app/src/main/res/layout/``` you can find the files for the layout of the screen, its a simple colored backround with 3 centered buttons and a colored box for the image, the texts are centered as well, but i forgot to add the app icon tho.
 
