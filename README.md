@@ -32,6 +32,9 @@ I handled the Joke and Insult APIs in ```MainActivity```, they are quite similar
 
 The dog API is quite different and more complex. First i make the request and get in a queue, while this happens, a progress bar is shown on the screen. The request will fetch a link that leads to the image of the dog, if it doesn't it will show an error on screen. The image of the dog will be then shown on screen in a colored box, and will be deleted if the button is clicked again (in order to show the progress bar loading).
 
+
+I will ad more stuff in the future like a menu bar on the bottom and some of the APIs i already used in one of my Discord bots, [this one](https://github.com/Hue-Jhan/Discord-Free-API-Bot), i would also like to implement an AI that generates images through another API, there are free ones like [FooocusAI](https://github.com/lllyasviel/Fooocus) but documentation is in chinese : (
+
 <!--
 
 <img align="right" src="media/img1.jpg" width="230" />
