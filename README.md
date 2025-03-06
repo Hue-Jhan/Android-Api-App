@@ -1,5 +1,5 @@
 # Simple Android Api App
-Very simple Android app in kotlin containing some funny buttons and api features (work in progress).
+Very simple Android app in kotlin containing some funny buttons and api features (work in progress, i'll add more more features in the future).
 
 
 # 📱 App
@@ -28,7 +28,7 @@ In ```app/src/main/res/layout/``` you can find the files for the layout of the s
 
 ### - Api implementation
 
-I handled the Joke and Insult APIs in ```MainActivity``` , they are quite similar, the Dog one in 3 other files. Handling APIs in kotlin is real pain, first i built the web request, then i handled it as a string and updated the UI in the main thread with the string i just got, if no string is fetched, the button does nothing, and the error is shown in the logs. This applies for both APIs.
+I handled the Joke and Insult APIs in ```MainActivity```, they are quite similar, the Dog one in 3 other files. Handling APIs in kotlin is real pain, first i built the web request, then i handled it as a string and updated the UI in the main thread with the string i just got, if no string is fetched, the button does nothing, and the error is shown in the logs. This applies for both APIs.
 
 The dog API is quite different and more complex. First i make the request and get in a queue, while this happens, a progress bar is shown on the screen. The request will fetch a link that leads to the image of the dog, if it doesn't it will show an error on screen. The image of the dog will be then shown on screen in a colored box, and will be deleted if the button is clicked again (in order to show the progress bar loading).
 
