@@ -14,8 +14,6 @@ This application is a simple funny app based on 3 buttons, which answer to 3 API
 
 The Gui is pretty basic, its just 3 buttons and some colors, but later imma add a menu, more functionalities, api and useless stuff : )
 
-
-
 # 💻 Code
 
 The code is based almost entirely on the APIs (except for the customizable parts), but in the future as i said before I'll add a menu n stuff.
